@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <style>
+    body { margin: 0; padding: 20px; font-family: sans-serif; background: #0A0A0F; color: white; }
+  </style>
+</head>
+<body>
+  <h1>Testing ShadowCoach AI</h1>
+  <div id="root"></div>
+  <script type="module">
+    import App from './src/App.tsx';
+    import { createRoot } from 'react-dom/client';
+    import './src/index.css';
+    
+    console.log('App:', App);
+    console.log('Root element:', document.getElementById('root'));
+    
+    try {
+      const root = createRoot(document.getElementById('root'));
+      root.render(App());
+    } catch (e) {
+      console.error('Error rendering:', e);
+      document.body.innerHTML += '<pre style="color: red;">' + e.stack + '</pre>';
+    }
+  </script>
+</body>
+</html>
