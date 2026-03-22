@@ -39,8 +39,6 @@ export const Training: React.FC<Props> = ({ profile, onSave }) => {
   const [session, setSession] = useState<TrainingSession | null>(null);
   const [analyzeProgress, setAnalyzeProgress] = useState(0);
   const [cameraError, setCameraError] = useState('');
-  const [showCombo, setShowCombo] = useState(false);
-  const [comboCount, setComboCount] = useState(0);
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);

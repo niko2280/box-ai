@@ -333,7 +333,7 @@ export const usePoseDetection = (stance: 'orthodox' | 'southpaw', showSkeleton: 
     cancelAnimationFrame(animFrameRef.current);
   }, []);
 
-  const getResults = useCallback((duration: number): {
+  const getResults = useCallback((_duration: number): {
     scores: CategoryScores;
     punchLog: PunchEvent[];
     state: any;
